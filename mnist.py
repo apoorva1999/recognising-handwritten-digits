@@ -60,25 +60,25 @@ with tf.Session() as sess:
     # print("predicted = {} \n actual = {}".format(predicted, actual))
     #
     # arr =sess.run(correct_predictor, feed_dict={x: mnist.test.images, y_true: mnist.test.labels})
-    # list = arr.tolist()
-    # print("total samples = ", len(list))
-    # print("no of times False occurs = ",list.count(False))
-    # indices = [i for i, j in enumerate(list) if j==False]
-    # print("indices of false=",indices)
-    #
+#     list = arr.tolist()
+#     print("total samples = ", len(list))
+#     print("no of times False occurs = ",list.count(False))
+#     indices = [i for i, j in enumerate(list) if j==False]
+#     print("indices of false=",indices)
+    
     # print("accuracy = {:.2%}".format(sess.run(accuracy, feed_dict={x: mnist.test.images, y_true: mnist.test.labels})))
 
-    index = 90
-    plt.imshow(mnist.test.images[index].reshape(28, 28), cmap='Greys')
-    predicted, actual = sess.run([tf.argmax(y_pred,1),tf.argmax(y_true,1)], feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)})
-    print("predicted = {}\n   actual = {}".format(predicted,actual))
-    #
-    # print(sess.run(correct_predictor, feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)}))
-    arr =sess.run(correct_predictor, feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)})
-    print(len(arr.tolist()))
-    print(arr.tolist().count(True))
-    print("accuracy = {:.2%}".format(sess.run(accuracy, feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)})))
-    plt.show()
+#     index = 90
+#     plt.imshow(mnist.test.images[index].reshape(28, 28), cmap='Greys')
+#     predicted, actual = sess.run([tf.argmax(y_pred,1),tf.argmax(y_true,1)], feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)})
+#     print("predicted = {}\n   actual = {}".format(predicted,actual))
+#     #
+#     # print(sess.run(correct_predictor, feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)}))
+#     arr =sess.run(correct_predictor, feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)})
+#     print(len(arr.tolist()))
+#     print(arr.tolist().count(True))
+#     print("accuracy = {:.2%}".format(sess.run(accuracy, feed_dict={x: mnist.test.images[index].reshape(1,784), y_true: mnist.test.labels[index].reshape(1,10)})))
+#     plt.show()
 
 
 
